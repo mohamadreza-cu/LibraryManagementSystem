@@ -32,8 +32,7 @@ namespace LibraryManagementSystem.Presentation
 
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
-
+        private void button1_Click(object sender, EventArgs e)
         {
 
             try
@@ -101,6 +100,7 @@ namespace LibraryManagementSystem.Presentation
             txtISBN = new TextBox();
             txtPublisher = new TextBox();
             txtYear = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -108,7 +108,7 @@ namespace LibraryManagementSystem.Presentation
             label1.AutoSize = true;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(72, 15);
+            label1.Size = new Size(93, 20);
             label1.TabIndex = 0;
             label1.Text = "Book Details";
             // 
@@ -117,16 +117,17 @@ namespace LibraryManagementSystem.Presentation
             label2.AutoSize = true;
             label2.Location = new Point(25, 50);
             label2.Name = "label2";
-            label2.Size = new Size(29, 15);
+            label2.Size = new Size(38, 20);
             label2.TabIndex = 1;
             label2.Text = "Title";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(25, 87);
             label3.Name = "label3";
-            label3.Size = new Size(44, 15);
+            label3.Size = new Size(54, 20);
             label3.TabIndex = 2;
             label3.Text = "Author";
             // 
@@ -135,7 +136,7 @@ namespace LibraryManagementSystem.Presentation
             label4.AutoSize = true;
             label4.Location = new Point(25, 126);
             label4.Name = "label4";
-            label4.Size = new Size(32, 15);
+            label4.Size = new Size(41, 20);
             label4.TabIndex = 3;
             label4.Text = "ISBN";
             // 
@@ -144,7 +145,7 @@ namespace LibraryManagementSystem.Presentation
             label5.AutoSize = true;
             label5.Location = new Point(25, 167);
             label5.Name = "label5";
-            label5.Size = new Size(56, 15);
+            label5.Size = new Size(69, 20);
             label5.TabIndex = 4;
             label5.Text = "Publisher";
             // 
@@ -153,7 +154,7 @@ namespace LibraryManagementSystem.Presentation
             label6.AutoSize = true;
             label6.Location = new Point(25, 203);
             label6.Name = "label6";
-            label6.Size = new Size(29, 15);
+            label6.Size = new Size(37, 20);
             label6.TabIndex = 5;
             label6.Text = "Year";
             // 
@@ -161,7 +162,7 @@ namespace LibraryManagementSystem.Presentation
             // 
             txtTitle.Location = new Point(100, 46);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(100, 23);
+            txtTitle.Size = new Size(100, 27);
             txtTitle.TabIndex = 6;
             txtTitle.TextChanged += txtTitle_TextChanged;
             // 
@@ -169,33 +170,44 @@ namespace LibraryManagementSystem.Presentation
             // 
             txtAuthor.Location = new Point(100, 86);
             txtAuthor.Name = "txtAuthor";
-            txtAuthor.Size = new Size(100, 23);
+            txtAuthor.Size = new Size(100, 27);
             txtAuthor.TabIndex = 7;
             // 
             // txtISBN
             // 
             txtISBN.Location = new Point(100, 123);
             txtISBN.Name = "txtISBN";
-            txtISBN.Size = new Size(100, 23);
+            txtISBN.Size = new Size(100, 27);
             txtISBN.TabIndex = 8;
             // 
             // txtPublisher
             // 
             txtPublisher.Location = new Point(100, 163);
             txtPublisher.Name = "txtPublisher";
-            txtPublisher.Size = new Size(100, 23);
+            txtPublisher.Size = new Size(100, 27);
             txtPublisher.TabIndex = 9;
             // 
             // txtYear
             // 
             txtYear.Location = new Point(100, 206);
             txtYear.Name = "txtYear";
-            txtYear.Size = new Size(100, 23);
+            txtYear.Size = new Size(100, 27);
             txtYear.TabIndex = 10;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(242, 101);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 11;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // BookForm
             // 
-            ClientSize = new Size(284, 261);
+            ClientSize = new Size(345, 261);
+            Controls.Add(button1);
             Controls.Add(txtYear);
             Controls.Add(txtPublisher);
             Controls.Add(txtISBN);
@@ -238,6 +250,9 @@ namespace LibraryManagementSystem.Presentation
         private TextBox txtAuthor;
         private TextBox txtISBN;
         private TextBox txtPublisher;
+        private Button button1;
+
+        //private Button btnAdd_Click;
 
         //private Button btnAdd_Click;
         private TextBox txtYear;
@@ -246,6 +261,13 @@ namespace LibraryManagementSystem.Presentation
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
 
 
